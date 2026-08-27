@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Paul Heim Event & Media – hochwertige Event-, Foto- und Videoproduktion.">
+<title>Paul Heim — Event & Media</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+:root{--bg:#05080d;--surface:#0b1119;--surface2:#101823;--text:#f4f7fb;--muted:#8996a7;--blue:#168cff;--blue2:#66bdff;--line:rgba(255,255,255,.1);--max:1240px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 75% 8%,rgba(22,140,255,.12),transparent 26%),radial-gradient(circle at 10% 65%,rgba(22,140,255,.055),transparent 24%);z-index:-1}
+a{color:inherit;text-decoration:none}.wrap{width:min(calc(100% - 48px),var(--max));margin:auto}
+header{position:fixed;z-index:50;top:0;left:0;right:0;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(5,8,13,.7);backdrop-filter:blur(20px)}
+nav{height:82px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-family:Manrope;font-weight:800;letter-spacing:.16em;font-size:.82rem}
+.logo{width:38px;height:38px;border:1px solid rgba(102,189,255,.4);border-radius:10px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(22,140,255,.2),rgba(255,255,255,.025));font-style:italic;font-size:15px}.logo b{color:var(--blue2)}
+nav ul{display:flex;gap:32px;list-style:none;margin:0;padding:0;color:#b4bfcc;font-size:.86rem}nav a:hover{color:white}.nav-cta{padding:11px 17px;border:1px solid rgba(102,189,255,.32);border-radius:999px;color:#d9efff;font-size:.84rem}
+.hero{min-height:100vh;padding:150px 0 90px;display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.kicker{text-transform:uppercase;letter-spacing:.24em;font-size:.72rem;color:var(--blue2);font-weight:700;display:flex;align-items:center;gap:12px}.kicker:before{content:"";height:1px;width:34px;background:var(--blue2)}
+h1,h2,h3{font-family:Manrope;margin:0}h1{font-size:clamp(4rem,8vw,7.8rem);line-height:.86;letter-spacing:-.07em;margin:24px 0 28px;font-weight:800}h1 span{color:var(--blue2)}
+.hero-copy{max-width:620px;font-size:1.18rem;line-height:1.7;color:#aeb9c7}.buttons{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}.btn{padding:14px 21px;border-radius:999px;background:linear-gradient(135deg,#168cff,#086bc7);font-weight:700;box-shadow:0 15px 45px rgba(22,140,255,.18)}.btn:hover{transform:translateY(-2px)}.outline{padding:13px 20px;border:1px solid var(--line);border-radius:999px;color:#d9e2eb;background:rgba(255,255,255,.025)}
+.visual{height:560px;border-radius:30px;position:relative;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,#0d1d2d,#07101a 55%,#0b1724);box-shadow:0 35px 100px rgba(0,0,0,.45)}
+.visual:before{content:"";position:absolute;width:430px;height:430px;border-radius:50%;background:rgba(22,140,255,.14);filter:blur(70px);right:-110px;top:-100px}.visual:after{content:"";position:absolute;inset:18px;border:1px solid rgba(255,255,255,.07);border-radius:22px}
+.visual-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:55px 55px;mask-image:linear-gradient(to bottom,transparent,black 30%,black 70%,transparent)}
+.monogram{position:absolute;inset:0;display:grid;place-items:center;font:800 italic clamp(7rem,16vw,13rem)/1 Manrope;letter-spacing:-.18em;transform:translateX(-10px);text-shadow:0 0 70px rgba(22,140,255,.2)}.monogram .p{color:#168cff}.monogram .h{color:#edf3f8}.visual-label{position:absolute;z-index:2;left:30px;bottom:27px;font-size:.7rem;text-transform:uppercase;letter-spacing:.2em;color:#a9b7c7}
+section{padding:125px 0}.intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}.section-kicker{color:var(--blue2);text-transform:uppercase;letter-spacing:.2em;font-size:.7rem;font-weight:800}.intro h2{font-size:clamp(2.5rem,5vw,5rem);line-height:.95;letter-spacing:-.055em}.intro p{font-size:1.15rem;color:#a6b2c1;line-height:1.8;max-width:700px;margin:0}.facts{display:flex;gap:50px;margin-top:38px;padding-top:28px;border-top:1px solid var(--line)}.fact strong{font:800 2rem Manrope}.fact span{display:block;color:var(--muted);font-size:.78rem;margin-top:3px}
+.services-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:42px}.services-head h2,.portfolio-head h2{font-size:clamp(2.5rem,5vw,4.7rem);letter-spacing:-.055em}.services-head p{max-width:430px;color:var(--muted);margin:0}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.service{min-height:340px;padding:29px;border:1px solid var(--line);border-radius:25px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));display:flex;flex-direction:column;justify-content:space-between;transition:.3s}.service:hover{transform:translateY(-7px);border-color:rgba(102,189,255,.3);background:linear-gradient(145deg,rgba(22,140,255,.1),rgba(255,255,255,.02))}.service-num{font-size:.7rem;color:var(--blue2);letter-spacing:.18em}.service h3{font-size:1.7rem;letter-spacing:-.035em}.service p{color:var(--muted);margin:10px 0 0;line-height:1.7}.service-arrow{font-size:1.5rem;color:var(--blue2);align-self:flex-end}
+.portfolio-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:35px}.portfolio-head p{color:var(--muted);max-width:430px;margin:0}.portfolio{display:grid;grid-template-columns:1.35fr .65fr;gap:16px}.tile{position:relative;min-height:390px;border:1px solid var(--line);border-radius:25px;overflow:hidden;background:linear-gradient(145deg,#142a40,#07111d)}.tile:nth-child(2){min-height:390px;background:linear-gradient(145deg,#101820,#0b4e78)}.tile:nth-child(3){min-height:250px;background:linear-gradient(145deg,#131b25,#183e59);grid-column:1/-1}.tile:before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75),transparent 55%)}.tile .tag{position:absolute;left:24px;top:22px;border:1px solid rgba(255,255,255,.18);padding:7px 10px;border-radius:99px;font-size:.67rem;letter-spacing:.15em;text-transform:uppercase;background:rgba(0,0,0,.15)}.tile h3{position:absolute;left:24px;bottom:22px;font-size:1.65rem}
+.cta{padding:75px;border-radius:30px;border:1px solid rgba(102,189,255,.2);background:radial-gradient(circle at 85% 10%,rgba(22,140,255,.18),transparent 34%),linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.018));text-align:center}.cta h2{font-size:clamp(2.8rem,6vw,6rem);line-height:.92;letter-spacing:-.06em}.cta h2 span{color:var(--blue2)}.cta p{color:var(--muted);max-width:620px;margin:20px auto 30px;font-size:1.05rem}
+footer{padding:35px 0 50px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#667487;font-size:.78rem;letter-spacing:.04em}
+@media(max-width:900px){nav ul{display:none}.hero{grid-template-columns:1fr;padding-top:130px}.visual{height:430px}.intro{grid-template-columns:1fr;gap:25px}.service-grid{grid-template-columns:1fr}.portfolio{grid-template-columns:1fr}.tile,.tile:nth-child(2),.tile:nth-child(3){min-height:300px;grid-column:auto}.services-head,.portfolio-head{display:block}.services-head p,.portfolio-head p{margin-top:15px}.cta{padding:55px 25px}}
+@media(max-width:560px){.wrap{width:min(calc(100% - 30px),var(--max))}.brand{font-size:.7rem}.nav-cta{display:none}h1{font-size:3.7rem}.hero{padding-bottom:40px}.visual{height:300px}.facts{gap:25px}.fact strong{font-size:1.5rem}section{padding:85px 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="brand" href="#"><span class="logo"><b>P</b>H</span> PAUL HEIM</a>
+<ul><li><a href="#about">Über mich</a></li><li><a href="#services">Leistungen</a></li><li><a href="#portfolio">Portfolio</a></li></ul>
+<a class="nav-cta" href="#contact">Projekt anfragen ↗</a>
+</nav></div></header>
+
+<main>
+<section class="wrap hero">
+<div>
+<div class="kicker">Event & Media</div>
+<h1>Momente.<br><span>In Szene.</span></h1>
+<p class="hero-copy">Ich begleite Events mit einem klaren Blick für Atmosphäre, Emotion und Details – von starken Fotos bis zu Filmen, die nach dem Event weiterleben.</p>
+<div class="buttons"><a class="btn" href="#contact">Projekt besprechen ↗</a><a class="outline" href="#portfolio">Arbeiten ansehen</a></div>
+</div>
+<div class="visual"><div class="visual-grid"></div><div class="monogram"><span class="p">P</span><span class="h">H</span></div><div class="visual-label">Paul Heim — Event & Media</div></div>
+</section>
+
+<section id="about"><div class="wrap intro">
+<div><div class="section-kicker">01 — Haltung</div><h2>Mehr als nur<br>ein Eventfilm.</h2></div>
+<div><p>Gute Medien entstehen dort, wo Technik in den Hintergrund tritt und der Moment im Mittelpunkt steht. Ich verbinde professionelle Produktion mit einem Gespür für Menschen, Energie und die kleinen Augenblicke, die ein Event besonders machen.</p>
+<div class="facts"><div class="fact"><strong>Foto</strong><span>Events & Business</span></div><div class="fact"><strong>Video</strong><span>Aftermovies & Social</span></div><div class="fact"><strong>Event</strong><span>On Location</span></div></div></div>
+</div></section>
+
+<section id="services"><div class="wrap">
+<div class="services-head"><div><div class="section-kicker">02 — Leistungen</div><h2>Was ich für<br>dich umsetze.</h2></div><p>Von der Aufnahme bis zum finalen Content: hochwertig produziert, authentisch erzählt und für deine Kanäle gedacht.</p></div>
+<div class="service-grid">
+<article class="service"><div class="service-num">01 / VIDEO</div><div><h3>Videoproduktion</h3><p>Eventfilme, Aftermovies, Social Clips und emotionale Brand Stories.</p></div><div class="service-arrow">↗</div></article>
+<article class="service"><div class="service-num">02 / FOTO</div><div><h3>Fotografie</h3><p>Authentische Event-, Business- und Reportagefotografie mit hochwertigem Look.</p></div><div class="service-arrow">↗</div></article>
+<article class="service"><div class="service-num">03 / CONTENT</div><div><h3>Event Content</h3><p>Schneller, moderner Content für Instagram, LinkedIn und deine Website.</p></div><div class="service-arrow">↗</div></article>
+</div></div></section>
+
+<section id="portfolio"><div class="wrap">
+<div class="portfolio-head"><div><div class="section-kicker">03 — Portfolio</div><h2>Momente, die<br>bleiben.</h2></div><p>Hier kommen deine echten Projekte, Fotos und Videos hin. Die Flächen sind bereits als hochwertige Portfolio-Bühne angelegt.</p></div>
+<div class="portfolio">
+<div class="tile"><span class="tag">Eventfilm</span><h3>Live. Emotional. Echt.</h3></div>
+<div class="tile"><span class="tag">Photography</span><h3>Details matter.</h3></div>
+<div class="tile"><span class="tag">Social Content</span><h3>Content, der weiterlebt.</h3></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="cta">
+<div class="section-kicker" style="justify-content:center">04 — Kontakt</div>
+<h2>Bereit für dein<br><span>nächstes Projekt?</span></h2>
+<p>Erzähl mir kurz, was du planst. Ich melde mich persönlich und wir schauen gemeinsam, was daraus entstehen kann.</p>
+<a class="btn" href="mailto:DEINE-EMAIL@BEISPIEL.DE">Anfrage senden ↗</a>
+</div></div></section>
+</main>
+<footer class="wrap"><span>© 2026 PAUL HEIM EVENT & MEDIA</span><span>Event · Foto · Video · Content</span></footer>
+</body></html>
